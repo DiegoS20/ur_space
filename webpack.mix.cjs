@@ -2,6 +2,10 @@ const mix = require("laravel-mix");
 const fs = require("fs");
 
 mix.disableSuccessNotifications();
+mix.options({
+    processCssUrls: false,
+});
+
 const getFiles = function (dir) {
     return fs.readdirSync(dir).filter((file) => {
         return fs.statSync(`${dir}/${file}`).isFile();
