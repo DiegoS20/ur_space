@@ -23,7 +23,7 @@
     color: #000;
   }
 </style>
-<nav class="navbar navbar-expand-lg fixed-top text-white {{ $black ? 'scrolled' : '' }}" id="navbar">
+<nav class="navbar navbar-expand-lg fixed-top text-white {{ $transparent ? '' : 'scrolled' }}" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand px-4" href="/">
       <img src="{{ asset('images/white-logo.svg') }}" alt="Bootstrap" width="80" />
@@ -59,119 +59,43 @@
   </div>
 </nav>
 
-{{-- LOGIN MODAL --}}
-<div class="modal fade" id="Login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">
-          Inicia Sesión o Regístrate
-        </h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <div class="py-3">
-          <img src="{{ asset('images/black-logo.svg') }}" alt="" width="20%" />
+@if (!$isUserLoggedIn)
+  {{-- LOGIN MODAL --}}
+  <div class="modal fade" id="Login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">
+            Inicia Sesión o Regístrate
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
-        <h5 class="text-black">¡Ur Space te da la bienvenida!</h5>
-        <div class="py-4">
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-            <label for="floatingInput">Correo Electrónico</label>
-          </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
-            <label for="floatingPassword">Contraseña</label>
-          </div>
-
-          <p class="tienescuenta py-3">
-            ¿Aún no te has registrado?<a href=""> Regístrate acá</a>
-          </p>
-
-          <a href="catalogo.html">
-            <button type="button" class="btn btn-purple btn-outline-dark w-100">
-              ¡Comencemos!
-            </button>
-          </a>
+        <div class="modal-body text-center">
+          <x-login-form />
         </div>
       </div>
     </div>
   </div>
-</div>
 
-{{-- SIGN UP MODAL --}}
-<div class="modal fade" id="Register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">
-          Regístrate
-        </h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="py-3 text-center">
-          <img src="{{ asset('images/black-logo.svg') }}" alt="" width="20%" />
+  {{-- SIGN UP MODAL --}}
+  <div class="modal fade" id="Register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">
+            Regístrate
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
-        <h5 class="text-black text-center">
-          ¡Ur Space te da la bienvenida!
-        </h5>
-        <div class="">
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" />
-            <label for="floatingInput">Nombre</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Apellido" />
-            <label for="floatingInput">Apellido</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="date" class="form-control" id="floatingInput" placeholder="FechaNacimiento" />
-            <label for="floatingInput">Fecha de Nacimiento</label>
-          </div>
-
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-            <label for="floatingInput">Correo Electrónico</label>
-          </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
-            <label for="floatingPassword">Contraseña</label>
-          </div>
-
-          <div class="col-12 py-3">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-              <label class="form-check-label small" for="invalidCheck">
-                Al registrarme, acepto los Términos del servicio, los
-                Términos de pagos, y la Política de privacidad de Ur
-                Space.
-              </label>
-              <div class="invalid-feedback">
-                You must agree before submitting.
-              </div>
-            </div>
-          </div>
-
-          <p class="tienescuenta py-2 text-center small">
-            ¿Ya tienes cuenta?<a href="Login"> Inicia Sesión</a>
-          </p>
+        <div class="modal-body">
+          <x-register-form />
         </div>
-      </div>
-      <div class="modal-footer">
-        <a href="catalogo.html">
-          <button type="button" class="btn btn-outline-dark w-100 btn-purple">
-            ¡Comencemos!
-          </button>
-        </a>
       </div>
     </div>
   </div>
-</div>
+@endif
 
-@if (!$black)
+@if ($transparent)
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const navbar = document.getElementById("navbar");
