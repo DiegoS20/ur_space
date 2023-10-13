@@ -1,4 +1,6 @@
-@extends('templates.base')
+@extends('templates.base', [
+    'transparent' => true,
+])
 
 @section('styles')
   <link rel="stylesheet" href="{{ asset('css/index.css') }}">

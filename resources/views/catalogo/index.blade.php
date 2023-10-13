@@ -1,4 +1,4 @@
-@extends('templates.base', ['black' => true])
+@extends('templates.base')
 
 @section('styles')
   <style>

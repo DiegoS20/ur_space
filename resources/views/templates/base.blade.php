@@ -30,7 +30,7 @@
 </head>
 
 <body>
-  <x-navbar :black="isset($black) ? $black : false" />
+  <x-navbar :transparent="isset($transparent) ? $transparent : false" />
 
   @yield('content')
 
