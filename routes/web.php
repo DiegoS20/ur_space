@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/catalogo', function () {
-    return view('catalogo');
+Route::prefix('catalogo')->group(function () {
+    Route::get('/', function () {
+        return view('catalogo.index');
+    });
 });
