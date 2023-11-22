@@ -1,0 +1,16 @@
+.nav-link {
+  color: #8307bd;
+}
+.nav-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.simb {
+  text-align: end;
+}
+
+.btn1 {
+  background-color: #8307bd;
+  color: #fff;
+}

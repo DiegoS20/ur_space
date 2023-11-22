@@ -1,0 +1,19 @@
+.search {
+  margin-top: 60px;
+  width: 100%;
+  padding: 200px;
+  text-align: center;
+  background-color: #eeeeee;
+}
+.search .btn1 {
+  background-color: #8307bd;
+  color: #fff;
+}
+.search .btn1:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.cards {
+  padding: 50px;
+}
