@@ -60,7 +60,7 @@
         <!-- 1 -->
         <div class="item">
           <div class="card cardMercado">
-            <a href="detalleProp.html">
+            <a href="{{ route('detalle-catalogo') }}">
               <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                 <!-- Imágenes del carrusel -->
                 <div class="carousel-inner">
@@ -111,7 +111,7 @@
         <!-- 2 -->
         <div class="item">
           <div class="card cardMercado">
-            <a href="detalleProp.html">
+            <a href="{{ route('detalle-catalogo') }}">
               <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
                 <!-- Imágenes del carrusel -->
                 <div class="carousel-inner">
@@ -158,7 +158,7 @@
         <!-- 3 -->
         <div class="item">
           <div class="card cardMercado">
-            <a href="detalleProp.html">
+            <a href="{{ route('detalle-catalogo') }}">
               <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
                 <!-- Imágenes del carrusel -->
                 <div class="carousel-inner">
@@ -205,7 +205,7 @@
         <!-- 4 -->
         <div class="item">
           <div class="card cardMercado">
-            <a href="detalleProp.html">
+            <a href="{{ route('detalle-catalogo') }}">
               <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
                 <!-- Imágenes del carrusel -->
                 <div class="carousel-inner">
@@ -253,7 +253,7 @@
         <!-- 5 -->
         <div class="item">
           <div class="card cardMercado">
-            <a href="detalleProp.html">
+            <a href="{{ route('detalle-catalogo') }}">
               <div id="carousel4" class="carousel slide" data-bs-ride="carousel">
                 <!-- Imágenes del carrusel -->
                 <div class="carousel-inner">
@@ -300,7 +300,7 @@
         <!-- 6 -->
         <div class="item">
           <div class="card cardMercado">
-            <a href="detalleProp.html">
+            <a href="{{ route('detalle-catalogo') }}">
               <div id="carousel5" class="carousel slide" data-bs-ride="carousel">
                 <!-- Imágenes del carrusel -->
                 <div class="carousel-inner">
@@ -346,7 +346,7 @@
         <!-- 7 -->
         <div class="item">
           <div class="card cardMercado">
-            <a href="detalleProp.html">
+            <a href="{{ route('detalle-catalogo') }}">
               <div id="carousel6" class="carousel slide" data-bs-ride="carousel">
                 <!-- Imágenes del carrusel -->
                 <div class="carousel-inner">
@@ -415,7 +415,7 @@
               ubicaciones y tamaños, cada uno listo para adaptarse a tu
               evento único.
             </p>
-            <a href="catalogo.html" class="btn btn-outline-dark">Visita nuestro catálogo
+            <a href="{{ route('catalogue') }}" class="btn btn-outline-dark">Visita nuestro catálogo
               <i class="fas fa-solid fa-book-open-reader" style="color: #000000"></i></a>
           </div>
         </div>
@@ -428,7 +428,7 @@
               Nuestra plataforma intuitiva te permite encontrar, reservar y
               pagar por tu terreno en pocos pasos, todo en línea.
             </p>
-            <a href="index.html" class="btn btn-outline-dark">Explora nuestro sistema
+            <a href="{{ route('catalogue') }}" class="btn btn-outline-dark">Explora nuestro sistema
               <i class="fa-solid fa-bookmark" style="color: #000000"></i></a>
           </div>
         </div>
@@ -442,7 +442,7 @@
               la selección del terreno hasta la planificación y ejecución de
               tu evento.
             </p>
-            <a href="soporte.html" class="btn btn-outline-dark">Atención al Cliente
+            <a href="{{ route('soporte') }}" class="btn btn-outline-dark">Atención al Cliente
               <i class="fa-solid fa-headset" style="color: #000000"></i></a>
           </div>
         </div>
@@ -456,7 +456,7 @@
               excelentes condiciones y cumpla con los estándares de
               seguridad.
             </p>
-            <a href="soporte.html" class="btn btn-outline-dark">Políticas de privacidad
+            <a href="{{ route('soporte') }}" class="btn btn-outline-dark">Políticas de privacidad
               <i class="fa-solid fa-key" style="color: #000000"></i></a>
           </div>
         </div>

@@ -35,25 +35,42 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item px-3">
-          <a class="nav-link active text-white" aria-current="page" href="catalogo.html">
+          <a class="nav-link active text-white" aria-current="page" href="{{ route('catalogue') }}">
             Navegar</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link active text-white" aria-current="page" href="#">Acerca de</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <!-- Mueve estos botones al final usando "ml-auto" -->
-        <li class="nav-item px-3">
-          <button type="button text-white" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Login">
-            Iniciar Sesión
-          </button>
-        </li>
-        <li class="nav-item px-3">
-          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Register">
-            ¡Regístrate!
-          </button>
-        </li>
+        @if ($isUserLoggedIn)
+          <li class="nav-item px-3">
+            <div class="dropdown">
+              <a class="btn dropdown-toggle text-white" style="background-color: #8307bd;" href="#" role="button"
+                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-user" style="color: #ffffff;"></i> Usuario
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink" style="right: 0;">
+                <a class="dropdown-item" href="{{ route('favorites') }}">Favoritos y Reservados</a>
+                <a class="dropdown-item" href="{{ route('estate') }}">Modo Propietario</a>
+                <a class="dropdown-item" href="{{ route('profile') }}">Perfil</a>
+                <hr>
+                <a class="dropdown-item" href="{{ route('soporte') }}">Centro de ayuda</a>
+                <a class="dropdown-item" href="{{ route('logout') }}">Cerrar Sesión</a>
+              </div>
+            </div>
+          @else
+          <li class="nav-item px-3">
+            <button type="button text-white" class="btn btn-outline-light" data-bs-toggle="modal"
+              data-bs-target="#Login">
+              Iniciar Sesión
+            </button>
+          </li>
+          <li class="nav-item px-3">
+            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Register">
+              ¡Regístrate!
+            </button>
+          </li>
+        @endif
       </ul>
     </div>
   </div>
@@ -93,6 +110,17 @@
       </div>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endif
 
 @if ($transparent)
