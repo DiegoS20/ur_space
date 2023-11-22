@@ -44,7 +44,7 @@ class UserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('login'), 201);
+        return redirect(route('profile'), 201);
     }
 
     /**
@@ -66,5 +66,19 @@ class UserController extends Controller
         return view('perfil.index', [
             'user' => $user
         ]);
+    }
+
+    /**
+     * Favorites page
+     */
+    public function favorites(Request $request): View {
+        return view('perfil.favoritos');
+    }
+
+    /**
+     * Estate page
+     */
+    public function estate(Request $request): View {
+        return view('perfil.propiedades');
     }
 }
