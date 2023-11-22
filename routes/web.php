@@ -22,12 +22,20 @@ Route::get('/', function () {
 Route::prefix('catalogo')->group(function () {
     Route::get('/', function () {
         return view('catalogo.index');
-    });
+    })->name('catalogue');
+
+    Route::get('/detalle', function () {
+        return view('catalogo.detalle');
+    })->name('detalle-catalogo');
 });
 
 Route::get('login', function () {
     return view('login');
 })->name('login_page');
+
+Route::get('soporte', function () {
+    return view('soporte');
+})->name('soporte');
 
 Route::prefix('users')->group(function () {
     Route::post('/login', [UserController::class, 'login'])->name('login');
@@ -36,5 +44,9 @@ Route::prefix('users')->group(function () {
 });
 
 Route::middleware(Authenticate::class)->group(function () {
-    Route::get('/perfil', [UserController::class, 'profile'])->name('profile');
+    Route::prefix('perfil')->group(function () {
+        Route::get('/', [UserController::class, 'profile'])->name('profile');
+        Route::get('/favoritos', [UserController::class, 'favorites'])->name('favorites');
+        Route::get('/propiedades', [UserController::class, 'estate'])->name('estate');
+    });
 });
