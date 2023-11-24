@@ -14,6 +14,8 @@
       color: white;
     }
   </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('content')
@@ -21,17 +23,8 @@
     <div class="row">
       <div class="col-md-8 justify-content-center">
         <div class="row d-flex justify-content-center">
-          <div class="col-md-8">
-            <div class="row">
-              <img class="pb-3" src="/images/gallery1.png" alt="" />
-              <img class="pb-2" src="/images/banner-catalogo.svg" alt="" />
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <img class="pb-2" src="/images/collage1.png" alt="" height="300px" />
-              <img class="pb-2" src="/images/collage2.png" alt="" />
-            </div>
+          <div class="col-md-12 px-5 text-center">
+            <div id="my_nanogallery2"></div>
           </div>
         </div>
       </div>
@@ -68,10 +61,22 @@
           </p>
           <p><i class="fas fa-solid fa-star" style="color: #8307bd"></i>
             Valoración: 4.9 (602)</p>
-          <button type="button" class="btn btn-purple btn-outline-dark w-100 my-5" data-bs-toggle="modal"
-            data-bs-target="#Reserva">
-            <b>¡Reserva ahora!</b>
-          </button>
+            
+          <div class="row d-flex">
+            <div class="col-md-8 col-sm-auto">
+              <button type="button" class="btn btn-purple btn-outline-dark w-100 my-5" data-bs-toggle="modal"
+                data-bs-target="#Reserva">
+                <b>¡Reserva ahora!</b>
+              </button>
+            </div>
+            
+            <div class="col-md-4 col-sm-auto">
+              <button type="button" class="btn btn-purple btn-outline-dark w-100 my-5">
+                <b><i class="iconoheart fa-solid fa-heart fa-beat" style="color: #ffffff; transition: color 0.3s;"
+                    onmouseover="this.style.color='black'" onmouseout="this.style.color='#ffffff'"></i>
+                </b>
+              </button>
+          </div>
         </div>
       </div>
     </div>
@@ -286,3 +291,43 @@
     </div>
   </div>
 @endsection
+
+@section('scripts')
+  <script src="{{ asset('js/nanogallery2.min.js') }}"></script>
+
+  <script>
+    $(document).ready(function() {
+      $("#my_nanogallery2").nanogallery2({
+        thumbnailHeight: 250,
+        thumbnailWidth: 400,
+        thumbnailBorderHorizontal: 0,
+        thumbnailBorderVertical: 0,
+        thumbnailBuilInit2: 'image_scale_1.15',
+        thumbnailHoverEffect2: 'thumbnail_scale_1.00_1.05_300|image_scale_1.15_1.00',
+        thumbnailLabel: {
+          display: false
+        },
+        thumbnailGutterWidth: 0,
+        thumbnailGutterHeight: 0,
+        items: [{
+            src: "./collage1.png",
+            srct: "./collage1.png",
+          },
+          {
+            src: "./collage2.png",
+            srct: "./collage2.png",
+          },
+          {
+            src: "./gallery1.png",
+            srct: "./gallery1.png",
+          },
+          {
+            src: "./gallery2.png",
+            srct: "./gallery2.png",
+          },
+        ],
+      });
+    });
+  </script>
+@endsection
+

@@ -99,8 +99,261 @@
           <div class="container">
 
             <p class="simb">
-              <a class = "btn" href="#"><i class="fa-solid fa-plus fa-xl" style="color: #8307bd;"></i></a>
+              <a class = "btn" data-bs-toggle="modal" data-bs-target="#AgregarProp"><i class="fa-solid fa-plus fa-xl"
+                  style="color: #8307bd;"></i></a>
             </p>
+
+            <!-- MODAL AGREGAR PROPIEDAD -->
+            <div class="modal fade" id="AgregarProp" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">
+                      Agregar Propiedad
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container">
+                      <!-- Nombre de Propiedad -->
+                      <div class="form-floating mb-4">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Propiedad" />
+                        <label for="floatingInput">Nombre de la Propiedad</label>
+                      </div>
+                      <!--Finaliza Nombre de Propiedad -->
+
+                      <!-- Ubicación de Propiedad -->
+                      <div class="row g-3 mb-4">
+                        <div class="col">
+                          <label for="Pais" class="form-label">País</label>
+                          <input type="text" class="form-control" id="Pais" placeholder=""
+                            aria-label="First name" />
+                        </div>
+                        <div class="col">
+                          <label for="Ciudad" class="form-label">Ciudad</label>
+                          <input type="text" class="form-control" id="Ciudad" placeholder=""
+                            aria-label="Last name" />
+                        </div>
+                      </div>
+
+                      <div class="mb-4">
+                        <label for="direccion" class="form-label">Dirección de la Propiedad</label>
+                        <input type="email" class="form-control" id="direccion" placeholder="" />
+                      </div>
+                      <!-- Finaliza Ubicación de Propiedad -->
+
+                      <!-- Descripción de Propiedad -->
+                      <div class="row mb-4">
+                        <div class="">
+                          <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                      </div>
+                      <!-- Finaliza Descripción de Propiedad -->
+
+                      <!-- Precio y Capacidad de Propiedad -->
+                      <div class="row mb-4">
+                        <div class="col-md-6">
+                          <label for="dinero" class="form-label">Precio de Propiedad</label>
+                          <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-money-bill"
+                                style="color: #8307bd"></i></span>
+                            <input type="text" class="form-control" id="dinero"
+                              aria-label="Amount (to the nearest dollar)" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="dinero" class="form-label">Capacidad de Propiedad</label>
+                          <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-person"
+                                style="color: #8307bd"></i></span>
+                            <input type="text" class="form-control" id="dinero"
+                              aria-label="Amount (to the nearest dollar)" />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Finaliza Precio y Capacidad de Propiedad -->
+
+                      <!-- Categoria General de Propiedad -->
+                      <label for="" class="form-label">Categorias</label>
+                      <div class="row mb-4 text-center">
+                        <div class="col-md-4 col-sm-auto">
+                          <div class="">
+                            <div class="form-check py-2">
+                              <input class="form-check-input" type="checkbox" value="" id="catModerno" />
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Moderno
+                              </label>
+                            </div>
+                            <div class="form-check py-2">
+                              <input class="form-check-input" type="checkbox" value="" id="catLujoso" />
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Lujuso
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-auto">
+                          <div class="">
+                            <div class="form-check py-2">
+                              <input class="form-check-input" type="checkbox" value="" id="catRomantico" />
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Romántico
+                              </label>
+                            </div>
+                            <div class="form-check py-2">
+                              <input class="form-check-input" type="checkbox" value="" id="catSencillo" />
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Sencillo
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-auto">
+                          <div class="">
+                            <div class="form-check py-2">
+                              <input class="form-check-input" type="checkbox" value="" id="catFF" />
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Family Friendly
+                              </label>
+                            </div>
+                            <div class="form-check py-2">
+                              <input class="form-check-input" type="checkbox" value="" id="catDivertido" />
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Divertidos
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Finaliza Categoría General e Propiedad -->
+
+                      <!-- Categoria por Ubicación -->
+                      <label for="" class="form-label">Categorias por Ubicación</label>
+                      <div class="row mb-4 d-flex">
+
+                        <!-- Casa -->
+                        <div class="col-md-3 col-sm-auto">
+                          <div class="form-check py-2">
+                            <input class="form-check-input" type="checkbox" value="" id="casacheck" />
+                            <label class="form-check-label" for="flexCheckDefault">
+                              <i class="fa-solid fa-house" style="color: #000000"></i> Casa
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- Hotel -->
+                        <div class="col-md-3 col-sm-auto">
+                          <div class="form-check py-2">
+                            <input class="form-check-input" type="checkbox" value="" id="hotelcheck" />
+                            <label class="form-check-label" for="flexCheckDefault">
+                              <i class="fa-solid fa-hotel" style="color: #000000"></i> Hotel
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- Playa -->
+                        <div class="col-md-3 col-sm-auto">
+                          <div class="form-check py-2">
+                            <input class="form-check-input" type="checkbox" value="" id="playacheck" />
+                            <label class="form-check-label" for="flexCheckDefault">
+                              <i class="fa-solid fa-umbrella-beach" style="color: #000000"></i> Playa
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- Bosque -->
+                        <div class="col-md-3 col-sm-auto">
+                          <div class="form-check py-2">
+                            <input class="form-check-input" type="checkbox" value="" id="bosquecheck" />
+                            <label class="form-check-label" for="flexCheckDefault">
+                              <i class="fa-solid fa-tree" style="color: #000000"></i> Bosque
+                            </label>
+                          </div>
+                        </div>
+
+                      </div>
+                      <!-- Finaliza Categoría según Ubicación de Propiedad -->
+
+                      <!-- Categoria por Celebración -->
+                      <label for="" class="form-label">Categorias por Celebración</label>
+                      <div class="row mb-4 d-flex">
+
+                        <!-- Casa -->
+                        <div class="col-md-3 col-sm-auto">
+                          <div class="form-check py-2">
+                            <input class="form-check-input" type="checkbox" value="" id="boda" />
+                            <label class="form-check-label" for="flexCheckDefault">
+                              <i class="fa-solid fa-ring" style="color: black"></i> Bodas
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- Hotel -->
+                        <div class="col-md-3 col-sm-auto">
+                          <div class="form-check py-2">
+                            <input class="form-check-input" type="checkbox" value="" id="grad" />
+                            <label class="form-check-label" for="flexCheckDefault">
+                              <i class="fas fa-regular fa-graduation-cap" style="color: black"></i> Graduaciones
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- Playa -->
+                        <div class="col-md-3 col-sm-auto">
+                          <div class="form-check py-2">
+                            <input class="form-check-input" type="checkbox" value="" id="concierto" />
+                            <label class="form-check-label" for="flexCheckDefault">
+                              <i class="fas fa-regular fa-music" style="color: black"></i> Conciertos
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- Bosque -->
+                        <div class="col-md-3 col-sm-auto">
+                          <div class="form-check py-2">
+                            <input class="form-check-input" type="checkbox" value="" id="expo" />
+                            <label class="form-check-label" for="flexCheckDefault">
+                              <i class="fas fa-regular fa-palette" style="color: black"></i>Exposiciones
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- Bosque -->
+                        <div class="col-md-3 col-sm-auto">
+                          <div class="form-check py-2">
+                            <input class="form-check-input" type="checkbox" value="" id="cumple" />
+                            <label class="form-check-label" for="flexCheckDefault">
+                              <i class="fa-solid fa-cake-candles" style="color: black"></i> Cumpleaños
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Finaliza Categoría según Celebración de Propiedad -->
+
+                      <!-- Fotos de Propiedad -->
+                      <div class="row mb-4">
+                        <label for="" class="form-label">Agregar Fotografías de Propiedad</label>
+                        <div class="input-group mb-3">
+                          <label class="input-group-text" for="inputGroupFile01"><i class="fa-solid fa-image"
+                              style="color: #8307bd;"></i></label>
+                          <input type="file" class="form-control" id="inputGroupFile01" multiple>
+                        </div>
+                      </div>
+                      <!-- Termina Fotos de Propiedad -->
+
+                      <!-- Boton -->
+                      <button type="button" class="btn btn-purple btn-outline-dark w-100 mt-2">
+                        <b>Agregar Propiedad</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div class="row d-flex pb-5">
               <div class="col-md-3">
@@ -360,7 +613,7 @@
                 <div class="col-mb-3">
                   <h6 class="mb-3">Nombre</h6>
                 </div>
-                <div class="col-sm-4 text-secondary">
+                <div class="text-secondary">
                   <input type="text" class="form-control" value="Seine Bight" />
                 </div>
               </div>
@@ -411,3 +664,4 @@
     </div>
   </div>
 @endsection
+

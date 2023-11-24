@@ -560,8 +560,9 @@
                 <p>
                   <b>Tipo de propiedad en la que se encuentra el terreno</b>
                 </p>
+
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3" style="max-width: 18rem">
+                  <div class="card mb-3 btn" id="filtroCasa" style="max-width: 18rem">
                     <div class="card-body">
                       <p>
                         <i class="fa-solid fa-house fa-2xl" style="color: #000000"></i>
@@ -569,9 +570,10 @@
                       <p class="pt-2">Casa</p>
                     </div>
                   </div>
+                  
                 </div>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3" style="max-width: 18rem">
+                  <div class="card mb-3 btn" id="filtroHotel" style="max-width: 18rem">
                     <div class="card-body">
                       <p>
                         <i class="fa-solid fa-hotel fa-2xl" style="color: #000000"></i>
@@ -581,7 +583,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3" style="max-width: 18rem">
+                  <div class="card mb-3 btn" id="filtroPlaya" style="max-width: 18rem">
                     <div class="card-body">
                       <p>
                         <i class="fa-solid fa-umbrella-beach fa-2xl" style="color: #000000"></i>
@@ -591,7 +593,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3" style="max-width: 18rem">
+                  <div class="card mb-3 btn" id="filtroBosque" style="max-width: 18rem">
                     <div class="card-body">
                       <p>
                         <i class="fa-solid fa-tree fa-2xl" style="color: #000000"></i>
@@ -605,7 +607,7 @@
               <div class="row d-flex justify-content-center pt-3">
                 <p><b>Cantidad de personas a asistir</b></p>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3" style="max-width: 18rem">
+                  <div class="card mb-3 btn" id="cant50" style="max-width: 18rem">
                     <div class="card-body">
                       <p>
                         <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
@@ -615,7 +617,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3" style="max-width: 18rem">
+                  <div class="card mb-3 btn" id="cant100" style="max-width: 18rem">
                     <div class="card-body">
                       <p>
                         <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
@@ -625,7 +627,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3" style="max-width: 18rem">
+                  <div class="card mb-3 btn" id="cant500" style="max-width: 18rem">
                     <div class="card-body">
                       <p>
                         <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
@@ -635,12 +637,12 @@
                   </div>
                 </div>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3" style="max-width: 18rem">
+                  <div class="card mb-3 btn" id="cantmas500" style="max-width: 18rem">
                     <div class="card-body">
                       <p>
                         <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
                       </p>
-                      <p>+500 personas</p>
+                      <p class="text-justify">+500</p>
                     </div>
                   </div>
                 </div>
