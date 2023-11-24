@@ -562,87 +562,183 @@
                 </p>
 
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3 btn" id="filtroCasa" style="max-width: 18rem">
+                  <div class="card mb-3" id="filtroCasa" style="max-width: 18rem">
                     <div class="card-body">
-                      <p>
-                        <i class="fa-solid fa-house fa-2xl" style="color: #000000"></i>
-                      </p>
-                      <p class="pt-2">Casa</p>
-                    </div>
-                  </div>
-                  
-                </div>
-                <div class="col-md-3 px-2">
-                  <div class="card mb-3 btn" id="filtroHotel" style="max-width: 18rem">
-                    <div class="card-body">
-                      <p>
-                        <i class="fa-solid fa-hotel fa-2xl" style="color: #000000"></i>
-                      </p>
-                      <p class="pt-2">Hotel</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 px-2">
-                  <div class="card mb-3 btn" id="filtroPlaya" style="max-width: 18rem">
-                    <div class="card-body">
-                      <p>
-                        <i class="fa-solid fa-umbrella-beach fa-2xl" style="color: #000000"></i>
-                      </p>
-                      <p class="pt-2">Playa</p>
+                      <div class="row d-flex justify-content-center align-content-center text-center">
+
+                        <div class="col-md-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                              value="option1">
+                            <label class="form-check-label" for="inlineRadio1"> Casa</label>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <p>
+                            <i class="fa-solid fa-house fa-2xl" style="color: #000000"></i>
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3 btn" id="filtroBosque" style="max-width: 18rem">
+                  <div class="card mb-3" id="filtroHotel" style="max-width: 18rem">
                     <div class="card-body">
-                      <p>
-                        <i class="fa-solid fa-tree fa-2xl" style="color: #000000"></i>
-                      </p>
-                      <p class="pt-2">Bosque</p>
+                      <div class="row d-flex justify-content-center align-content-center text-center">
+
+                        <div class="col-md-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                              value="option1">
+                            <label class="form-check-label" for="inlineRadio2"> Hotel</label>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <p>
+                            <i class="fa-solid fa-hotel fa-2xl" style="color: #000000"></i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3 px-2">
+                  <div class="card mb-3" id="filtroPlaya" style="max-width: 18rem">
+                    <div class="card-body">
+                      <div class="row d-flex justify-content-center align-content-center text-center">
+
+                        <div class="col-md-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                              value="option1">
+                            <label class="form-check-label" for="inlineRadio3"> Playa</label>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <p>
+                            <i class="fa-solid fa-umbrella-beach fa-2xl" style="color: #000000"></i>
+                          </p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 px-2">
+                  <div class="card mb-3" id="filtroBosque" style="max-width: 18rem">
+                    <div class="card-body">
+                      <div class="row d-flex justify-content-center align-content-center text-center">
+                        <div class="col-md-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                              value="option1">
+                            <label class="form-check-label" for="inlineRadio4">Bosque</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <p>
+                            <i class="fa-solid fa-tree fa-2xl" style="color: #000000"></i>
+                          </p>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
               </div>
               <hr>
+
+
               <div class="row d-flex justify-content-center pt-3">
                 <p><b>Cantidad de personas a asistir</b></p>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3 btn" id="cant50" style="max-width: 18rem">
+                  <div class="card mb-3" id="cant50" style="max-width: 18rem">
                     <div class="card-body">
-                      <p>
-                        <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
-                      </p>
-                      <p>50 personas</p>
+
+                      <div class="row d-flex justify-content-center align-content-center text-center">
+
+                        <div class="col-md-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="personas" id="inlineRadio1"
+                              value="option1">
+                            <label class="form-check-label" for="inlineRadio1">50</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <p>
+                            <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
+                          </p>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3 btn" id="cant100" style="max-width: 18rem">
+                  <div class="card mb-3" id="cant100" style="max-width: 18rem">
                     <div class="card-body">
-                      <p>
-                        <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
-                      </p>
-                      <p>100 personas</p>
+                      <div class="row d-flex justify-content-center align-content-center text-center">
+                        <div class="col-md-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="personas" id="inlineRadio2"
+                              value="option1">
+                            <label class="form-check-label" for="inlineRadio2">100</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <p>
+                            <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3 btn" id="cant500" style="max-width: 18rem">
+                  <div class="card mb-3" id="cant500" style="max-width: 18rem">
                     <div class="card-body">
-                      <p>
-                        <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
-                      </p>
-                      <p>500 personas</p>
+                    <div class="row d-flex justify-content-center align-content-center text-center">
+                        <div class="col-md-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="personas" id="inlineRadio3"
+                              value="option1">
+                            <label class="form-check-label" for="inlineRadio3">500</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <p>
+                            <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
+                          </p>
+                        </div>
+                      </div>
+                      
                     </div>
                   </div>
                 </div>
                 <div class="col-md-3 px-2">
-                  <div class="card mb-3 btn" id="cantmas500" style="max-width: 18rem">
+                  <div class="card mb-3" id="cantmas500" style="max-width: 18rem">
                     <div class="card-body">
-                      <p>
-                        <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
-                      </p>
-                      <p class="text-justify">+500</p>
+                    <div class="row d-flex justify-content-center align-content-center text-center">
+                        <div class="col-md-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="personas" id="inlineRadio4"
+                              value="option1">
+                            <label class="form-check-label" for="inlineRadio4">+500</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <p>
+                            <i class="fa-solid fa-people-group fa-lg" style="color: #000000;"></i>
+                          </p>
+                        </div>
+                      </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -715,3 +811,4 @@
     </div>
   </div>
 @endsection
+
