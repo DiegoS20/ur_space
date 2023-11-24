@@ -143,6 +143,16 @@
                       </div>
                       <!-- Finaliza Ubicación de Propiedad -->
 
+
+                      <!-- Descripción de Link de MAPS -->
+                      <div class="row mb-4">
+                        <div class="">
+                          <label for="exampleFormControlTextarea1" class="form-label">Localización en Mapa</label>
+                          <input type="text" class="form-control" id="mapa" placeholder="" />
+                        </div>
+                      </div>
+                      <!-- Finaliza Descripción de Propiedad -->
+
                       <!-- Descripción de Propiedad -->
                       <div class="row mb-4">
                         <div class="">
