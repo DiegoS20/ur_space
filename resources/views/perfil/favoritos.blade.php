@@ -435,7 +435,7 @@
           <div class="row d-flex pb-5">
             <div class="col-md-3">
               <div class="card cardMercado">
-                <a href="detalleProp.html">
+                <a href="detalleProp.html" data-bs-toggle="modal" data-bs-target="#reservaDet">
                   <div id="carouselExampleFade" class="carousel slide carousel-fade">
                     <!-- Imágenes del carrusel -->
                     <div class="carousel-inner">
@@ -485,7 +485,7 @@
 
             <div class="col-md-3">
               <div class="card cardMercado">
-                <a href="detalleProp.html">
+                <a href="detalleProp.html" data-bs-toggle="modal" data-bs-target="#reservaDet">
                   <div id="carouselExampleFade" class="carousel slide carousel-fade">
                     <!-- Imágenes del carrusel -->
                     <div class="carousel-inner">
@@ -530,6 +530,111 @@
                     </p>
                   </div>
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal detalle de reserva -->
+  <div>
+    <div class="modal fade" id="reservaDet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">
+              Detalle de Reserva
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="d-flex align-items-center py-3 px-4">
+              <img class="pe-2" src="/images/foto.svg" class="rounded-circle" width="50">
+              <a href="perfil.html" target="_blank" style="font-weight: bold; color: black;">Alejandra Reyes</a>
+            </div>
+
+            <div class="d-flex px-4">
+
+              <p class="pe-3" style="font-weight: bold;">Seine Bight</p>
+              <p class="pe-2" style="font-weight: bold;">Precio: </p>
+              <p>$1500.00</p>
+              
+            </div>
+            <div class="px-4">
+              <p style="font-weight: bold;">Descripción</p>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis dolorem nobis ut? Ipsum mollitia
+                laudantium consequatur sit! Odit porro ratione animi cumque doloribus vel ut dolorum eos sed soluta,
+                excepturi cum numquam aspernatur rem! Est, repellat ipsum quas harum pariatur veniam omnis quidem eum
+                perferendis fuga, nisi placeat et nostrum!</p>
+              <p style="font-weight: bold;">Datos de facturación</p>
+
+              <div class="row mb-3">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Nombre</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <span class="input-group-text" id="basic-addon3">Adriana Jacobo</span>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Email</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                <span class="input-group-text" id="basic-addon3">adriana.jacobo@gmail.com</span>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Teléfono</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <span class="input-group-text" id="basic-addon3">(239) 816-9029</span>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Movil</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <span class="input-group-text" id="basic-addon3">(239) 816-9029</span>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Fecha</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <span class="input-group-text" id="basic-addon3">dd/mm/yyyy</span>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Hora de inicio estimada</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <span class="input-group-text" id="basic-addon3">00:00</span>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-12 text-secondary">
+                  <p><i class="fas fa-solid fa-triangle-exclamation" style="color: #808389;"></i> Las horas de reserva o
+                    la duración del evento deberán discutirse con el propietario</p>
+                </div>
+              </div>
+
+              <div class="row pb-3">
+                <p style="font-weight: bold;">Datos de tarjeta</p>
+                <div class="col-md-6">
+                  <label for="numtarjeta" class="form-label">Número de Tarjeta</label>
+                  <span class="input-group-text" id="basic-addon3">XXXX-XXXX-XXXX-0000</span>
+                </div>
+                <div class="col-md-6">
+                  <label for="fechaTarjeta" class="form-label">Fecha de Vencimiento</label>
+                  <span class="input-group-text" id="basic-addon3">00/00</span>
+                </div>
               </div>
             </div>
           </div>

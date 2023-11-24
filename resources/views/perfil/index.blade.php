@@ -242,7 +242,7 @@
                 </div>
               </div>
             </div>
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-center text-center">
               <a href="{{ route('estate') }}" style="color: #fff; text-decoration: none">
                 <button class="btn btn-purple1" style="width: 30%">
                   Ver mis propiedades
