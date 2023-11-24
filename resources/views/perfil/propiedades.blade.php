@@ -11,11 +11,11 @@
 
       <ul class="nav nav-tabs " id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+          <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
             aria-selected="true">Tus reservas </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+          <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile"
             aria-selected="false">Mis propiedades</a>
         </li>
       </ul>
@@ -99,7 +99,7 @@
           <div class="container">
 
             <p class="simb">
-              <i class="fa-solid fa-plus fa-xl" style="color: #8307bd;"></i>
+              <a class = "btn" href="#"><i class="fa-solid fa-plus fa-xl" style="color: #8307bd;"></i></a>
             </p>
 
             <div class="row d-flex pb-5">
@@ -401,7 +401,7 @@
                   </div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                  <input type="button" class="btn btn-purple1 px-4" value="Guardar " style="width: 30%" />
+                  <input type="button" class="btn btn1 btn-purple1 px-4" value="Guardar " style="width: 30%" />
                 </div>
               </div>
             </div>

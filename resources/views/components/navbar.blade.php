@@ -43,21 +43,21 @@
         <!-- Mueve estos botones al final usando "ml-auto" -->
         @if ($isUserLoggedIn)
           <li class="nav-item px-3">
-            <div class="dropdown">
-              <a class="btn dropdown-toggle text-white" style="background-color: #8307bd;" href="#" role="button"
-                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa-solid fa-user" style="color: #ffffff;"></i> Usuario
-              </a>
-
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink" style="right: 0;">
-                <a class="dropdown-item" href="{{ route('favorites') }}">Favoritos y Reservados</a>
-                <a class="dropdown-item" href="{{ route('estate') }}">Modo Propietario</a>
-                <a class="dropdown-item" href="{{ route('profile') }}">Perfil</a>
-                <hr>
-                <a class="dropdown-item" href="{{ route('soporte') }}">Centro de ayuda</a>
-                <a class="dropdown-item" href="{{ route('logout') }}">Cerrar Sesión</a>
-              </div>
-            </div>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" style="background-color: #8307bd; color: white" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-user" style="color: #ffffff;"></i> Usuario
+            </button>
+            
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="{{ route('favorites') }}">Favoritos y Reservados</a></li>
+              <li><a class="dropdown-item" href="{{ route('estate') }}">Modo Propietario</a></li>
+              <li><a class="dropdown-item" href="{{ route('profile') }}">Perfil</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{{ route('soporte') }}">Centro de ayuda</a></li>
+              <li><a class="dropdown-item" href="{{ route('logout') }}">Cerrar Sesión</a></li>
+            </ul>
+          </div>
+          </li>
           @else
           <li class="nav-item px-3">
             <button type="button text-white" class="btn btn-outline-light" data-bs-toggle="modal"
@@ -110,17 +110,6 @@
       </div>
     </div>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endif
 
 @if ($transparent)

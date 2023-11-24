@@ -6,17 +6,20 @@
       margin-top: 7%;
     }
   </style>
+
+  <link rel="stylesheet" href="{{ mix('css/estate.css') }}">
+
 @endsection
 
 @section('content')
   <div class="container tabs">
-    <ul class="nav nav-fill" id="myTab" role="tablist">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+        <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
           aria-selected="true">Favoritos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile"
           aria-selected="false">Reservados</a>
       </li>
     </ul>
@@ -24,7 +27,7 @@
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <!--Contenedor de las cards-->
-        <div class="container">
+        <div class="container py-5">
           <div class="row d-flex pb-5">
             <div class="col-md-3">
               <div class="card cardMercado">
@@ -428,7 +431,7 @@
       <!-- tab-pane fade -->
 
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <div class="container">
+        <div class="container py-5">
           <div class="row d-flex pb-5">
             <div class="col-md-3">
               <div class="card cardMercado">

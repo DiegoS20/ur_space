@@ -11,8 +11,12 @@
       <div class="col-md-4 mb-3">
         <div class="card" style="height: 355px">
           <div class="card-body">
-            <div class="d-flex flex-column align-items-center text-center">
-              <img src="./images/foto.svg" alt="Profile picture" class="rounded-circle" width="150" />
+            <div class="d-flex flex-column align-items-center text-center pt-3">
+              <div class= "fotoPerfil rounded-circle" width="150">
+                <span class ="iniciales">EE</span>
+              </div>
+              
+              
               <div class="mt-3">
                 <h4>{{ $user->name }} {{ $user->last_name }}</h4>
 
@@ -311,17 +315,4 @@
     </div>
   </div>
   </div>
-@endsection
-
-@section('scripts')
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endsection
