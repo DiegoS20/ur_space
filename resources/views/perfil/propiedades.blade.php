@@ -418,7 +418,7 @@
                           <a id="abrirModal" class="btn1 btn">Editar</a>
                         </div>
                         <div class="col-md-6">
-                          <a class="btn1 btn">Borrar</a>
+                          <a class="btn1 btn" id= "alerta">Borrar</a>
                         </div>
                       </div>
                     </div>
@@ -477,7 +477,7 @@
                           <a id="abrirModal" class="btn1 btn">Editar</a>
                         </div>
                         <div class="col-md-6">
-                          <a class="btn1 btn">Borrar</a>
+                          <a class="btn1 btn" id= "alerta">Borrar</a>
                         </div>
                       </div>
                     </div>
@@ -536,7 +536,7 @@
                           <a id="abrirModal" class="btn1 btn">Editar</a>
                         </div>
                         <div class="col-md-6">
-                          <a class="btn1 btn">Borrar</a>
+                          <a class="btn1 btn" id= "alerta">Borrar</a>
                         </div>
                       </div>
                     </div>
@@ -595,7 +595,7 @@
                           <a id="abrirModal" class="btn1 btn">Editar</a>
                         </div>
                         <div class="col-md-6">
-                          <a class="btn1 btn">Borrar</a>
+                          <a class="btn1 btn" id= "alerta">Borrar</a>
                         </div>
                       </div>
                     </div>
@@ -673,5 +673,33 @@
       </div>
     </div>
   </div>
+@endsection
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.all.min.js"></script>
+<script>
+  document.getElementById('alerta').addEventListener('click', function(){
+    Swal.fire({
+    title: "¿Estás seguro?",
+    text: "¡No podrás revertir esto!",
+    icon: "warning",
+    showCancelButton: true,
+    cancelButtonText: "Cancelar",
+    confirmButtonColor: "#8307bd",
+    cancelButtonColor: "#000",
+    confirmButtonText: "¡Si, borralo!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Eliminado!",
+          text: "Tu propiedad ha sido eliminada.",
+          icon: "success",
+          confirmButtonColor: "#8307bd"
+        });
+      }
+    });
+  })
+</script>
 @endsection
 
